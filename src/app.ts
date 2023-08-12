@@ -2,6 +2,7 @@ import { PropsWithChildren } from 'react'
 import { useLaunch } from '@tarojs/taro'
 import './app.scss'
 
+// 全局引入一次即可
 function App({ children }: PropsWithChildren<any>) {
 
   useLaunch(() => {

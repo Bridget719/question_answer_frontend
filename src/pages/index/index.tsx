@@ -1,7 +1,8 @@
 import { View, Text } from '@tarojs/components'
+import React from 'react'
 import { useLoad } from '@tarojs/taro'
+import Home from '@/pages/home/index'
 import './index.scss'
-import Home from '@/pages/home/index.tsx'
 
 export default function Index() {
 

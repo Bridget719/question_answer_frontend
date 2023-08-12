@@ -11,10 +11,10 @@
   }
   
   .recommend-item {
+    border: rgba(51, 51, 51, 0.178) 1px solid;
+    padding: 12px;
+    border-radius: 10px;
     margin-top: 30rpx;
-    display: flex;
-    align-items: center;
-  
     img {
       width: 200rpx;
       height: 200rpx;
@@ -27,3 +27,7 @@
       margin: 0;
     }
   }
+.recommend-item-types{
+  padding-top: 12px;
+  color: #bbb;
+}

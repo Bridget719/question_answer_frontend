@@ -1,7 +1,20 @@
-import React from 'react';
-import { View, Text, Input, Image } from '@tarojs/components';
+import { View, Text, Input } from '@tarojs/components';
 import './index.scss'
 
+const list = [
+    {
+        title: '这是我给你们设置的静态的推荐信息1',
+        types: 'tech,life'
+    },
+    {
+        title: '这是我给你们设置的静态的这是我给你们设置的静态的推荐信息1',
+        types: 'tech,life'
+    },
+    {
+        title: '这是我给你们设置的静态的这是我给你们设置的静态的这是我给你们设置的静态的这是我给你们设置的静态的推荐信息1',
+        types: 'tech,life'
+    },
+]
 const Home = () => {
     return (
         <View className='container'>
@@ -9,18 +22,23 @@ const Home = () => {
                 <Input placeholder='搜索信息' className='search-input' />
             </View>
             <View>
-                <View className='recommend-item'>
-                    <Image src='https://img2.baidu.com/it/u=1059374246,2764131380&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=667' />
-                    <Text>推荐信息1</Text>
-                </View>
-                <View className='recommend-item'>
-                    <Image src='https://img2.baidu.com/it/u=1059374246,2764131380&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=667' />
-                    <Text>推荐信息2</Text>
-                </View>
-                <View className='recommend-item'>
-                    <Image src='https://img2.baidu.com/it/u=1059374246,2764131380&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=667' />
-                    <Text>推荐信息3</Text>
-                </View>
+                {
+                    list.map((item, index) => {
+                        return (
+                            <View className='recommend-item' key={index}>
+                                <View>{item.title}</View>
+                                <View className='recommend-item-types'>
+                                    {
+                                        item.types.split(',').map(item => {
+                                            return (
+                                                <Text key={item}>#{item} </Text>
+                                            )
+                                        })}
+                                </View>
+                            </View>
+                        )
+                    })
+                }
             </View>
         </View>
     );
