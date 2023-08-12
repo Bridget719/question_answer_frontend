@@ -1,0 +1,9 @@
+{
+  "miniprogramRoot": "./",
+  "projectname": "bridget_intro",
+  "appid": "testAppId",
+  "setting": {
+    "es6": false,
+    "minified": false
+  }
+}
